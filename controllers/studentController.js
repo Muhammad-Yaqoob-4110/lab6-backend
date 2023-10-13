@@ -50,7 +50,4 @@ module.exports = {
   updateStudent,
   getAllStudents,
   deleteStudent,
-  //   getAllProducts,
-  //   updateProduct,
-  //   deleteProduct,
 };
