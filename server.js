@@ -7,7 +7,7 @@ require("./utils/db");
 const productRouter = require("./routes/productRoutes");
 const studentRouter = require("./routes/studentRoutes");
 const invoiceRouter = require("./routes/invoiceRoutes");
-const purchaseHistoryRouter = require("./models/purchaseHistory");
+const purchaseHistoryRouter = require("./routes/purchaseHistoryRoutes");
 
 // get fun has two arguments first is end point then call back (no need to call. Called automatically)function
 app.get("/", (req, res) => {

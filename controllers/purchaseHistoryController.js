@@ -42,12 +42,19 @@ async function getAllPurchases(req, res) {
 async function deletePurchaseHistory(req, res) {
   try {
     const { id } = req.params;
-    await PurchaseHistory.findByIdAndRemove(id);
-    res.sendStatus(204);
+    const deletedRecord = await PurchaseHistory.findByIdAndRemove(id);
+    if (deletedRecord) {
+      res
+        .status(200)
+        .json({ message: "Purchase history deleted successfully" });
+    } else {
+      res.status(404).json({ error: "Record not found" });
+    }
   } catch (err) {
-    res.sendStatus(500).json({ error: err.message });
+    res.status(500).json({ error: err.message });
   }
 }
+
 module.exports = {
   createPurchase,
   updatePurchase,

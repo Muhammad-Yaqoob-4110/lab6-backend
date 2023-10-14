@@ -9,4 +9,4 @@ const purchaseHistorySchema = mongoose.Schema(
   { timestamps: true } // created at and updated at will be managed automatically
 );
 
-module.exports = mongoose.model("PurchaseHistory", purchaseHistorySchema); // table name & schema
+module.exports = mongoose.model("purchasehistories", purchaseHistorySchema); // table name & schema
